@@ -1,5 +1,6 @@
 import { Admin, Resource, ListGuesser, EditGuesser, ShowGuesser } from 'react-admin';
 import { PocketBaseProvider } from './ra-pocketbase';
+import { PostList, PostEdit, Postshow } from './Posts';
 
 const apiURL = 'https://obscure-space-carnival-pjrgj465jpvxf7947-8090.app.github.dev'
 
