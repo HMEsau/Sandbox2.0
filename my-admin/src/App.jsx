@@ -1,5 +1,4 @@
-import { Admin, Resource } from 'react-admin';
-import './App.css'
+import { Admin, Resource, ListGuesser, EditGuesser, ShowGuesser } from 'react-admin';
 import { PocketBaseProvider } from './ra-pocketbase';
 
 const apiURL = 'https://obscure-space-carnival-pjrgj465jpvxf7947-8090.app.github.dev/_/'
@@ -12,6 +11,12 @@ function App() {
       dataProvider={dataProvider}
       authProvider={authProvider}
     >
+      <Resource
+      name="posts"
+      list={ListGuesser}
+      edit={EditGuesser}
+      show={ShowGuesser}
+      />
 
     </Admin>
   );
