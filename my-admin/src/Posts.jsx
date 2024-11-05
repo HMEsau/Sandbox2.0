@@ -1,9 +1,8 @@
-import { Datagrid, DateField, DateInput, List, Show, SimpleForm, SimpleShowLayout, TextField, TextInput } from 'react-admin';
+import { Datagrid, DateField, DateInput, List, Show, Edit, Create, SimpleForm, SimpleShowLayout, TextField, TextInput } from 'react-admin';
 
 export const PostList = () => (
     <List>
         <Datagrid>
-            <TextField source="collectionName" />
             <TextField source="content" />
             <DateField source="created" />
             <DateField source="date" />
@@ -15,7 +14,6 @@ export const PostList = () => (
 export const PostEdit = () => (
     <Edit>
         <SimpleForm>
-            <TextInput source="collectionName" />
             <TextInput source="content" />
             <TextInput source="created" />
             <DateInput source="date" />
@@ -27,7 +25,6 @@ export const PostEdit = () => (
 export const Postshow = () => (
     <Show>
         <SimpleShowLayout>
-            <TextField source="collectionName" />
             <TextField source="content" />
             <DateField source="created" />
             <DateField source="date" />
@@ -35,4 +32,15 @@ export const Postshow = () => (
             <DateField source="updated" />
         </SimpleShowLayout>
     </Show>
+);
+export const PostCreate = () => (
+    <Create>
+        <SimpleForm>
+            <TextInput source="content" />
+            <TextInput source="created" />
+            <DateInput source="date" />
+            <TextInput source="id" />
+            <DateInput source="updated" />
+        </SimpleForm>
+    </Create>
 );
